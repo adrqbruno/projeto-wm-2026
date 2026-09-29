@@ -77,6 +77,23 @@ section:last-child{border-bottom:0}
 .hnote{font-size:11px;color:var(--muted);margin-top:8px}
 @media (max-width:860px){.tl{grid-template-columns:1fr 1fr;row-gap:14px}.tl::before{display:none}.hours{grid-template-columns:1fr}.hrow{grid-template-columns:120px 1fr 40px}}
 @media print{.hours .big b{font-size:32px}}
+.ctas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.cta{border:1px solid var(--ink);padding:16px;display:flex;flex-direction:column;gap:8px;color:var(--ink);text-decoration:none}
+.cta .mono{color:var(--muted)}
+.cta h3{margin:0;font-size:15px}
+.cta p{margin:0;font-size:12px;color:var(--muted);flex:1}
+.cta .btn{align-self:flex-start;background:var(--ink);color:var(--bg);font-weight:700;font-size:12px;padding:8px 14px;margin-top:4px}
+.cta:hover .btn,.cta:focus-visible .btn{background:var(--pos);color:#FFFFFF}
+.cta:focus-visible{outline:2px solid var(--pos);outline-offset:2px}
+.slink{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--ink);border-bottom:1px solid var(--ink);text-decoration:none}
+.docs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.docs .col{border-top:2px solid var(--ink);padding-top:8px}
+.docs .col .mono{color:var(--muted);display:block;margin-bottom:6px}
+.docs .col div{font-size:12px;padding:5px 0;border-bottom:1px solid var(--line)}
+.docs .col div:last-child{border-bottom:0}
+.docs .col small{color:var(--muted);font-size:10.5px;display:block}
+@media (max-width:860px){.ctas{grid-template-columns:1fr}.docs{grid-template-columns:1fr 1fr}}
+@media print{.cta .btn::after{content:" · " attr(data-url);font-weight:400}}
 footer{padding:14px 40px 26px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line)}
 footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em}
 @media (max-width:860px){header,main,footer{padding-left:20px;padding-right:20px}.hero{grid-template-columns:1fr 1fr}.streams,.effort,.qq,.status,.facts{grid-template-columns:1fr}.hero b{font-size:34px}header h1{font-size:24px}}
@@ -113,17 +130,36 @@ footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em}
   </div>
 </section>
 <section>
+  <div class="sh"><h2>Veja o detalhe do que foi feito</h2><span class="mono">3 ambientes vivos</span></div>
+  <div class="ctas">
+    <a class="cta" href="https://webmotors-performance-status.vercel.app/#2026-09-25" target="_blank" rel="noopener"><span class="mono">Acompanhamento</span><h3>Status de performance</h3><p>Leitura datada da performance das contas, com a atualização de 25/09.</p><span class="btn" data-url="webmotors-performance-status.vercel.app">Abrir status</span></a>
+    <a class="cta" href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/" target="_blank" rel="noopener"><span class="mono">Frentes 1 e 2</span><h3>Playbook de operação Google Ads</h3><p>45 itens com diagnóstico, verificação, recomendação e guardrail, mais regras, testes, rotinas e as 18 fontes.</p><span class="btn" data-url="webmotors-live-performance-playbook…vercel.app">Abrir playbook</span></a>
+    <a class="cta" href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener"><span class="mono">Frente 3</span><h3>Briefing TikTok e roadmap de outubro</h3><p>Estratégia, 9 editorias, specs de produção, plano de ação por time e checklist de setup.</p><span class="btn" data-url="webmotors-tiktok-briefing.vercel.app">Abrir briefing</span></a>
+  </div>
+</section>
+<section>
   <div class="sh"><h2>Volume da entrega</h2><span class="mono">3 frentes · 1 ciclo</span></div>
   <div class="streams">
     <div class="stream"><span class="mono">Frente 1</span><h3>Auditoria e diagnóstico</h3>
-      <div class="kv"><b>12</b><span>auditorias de conta por formato</span><b>6</b><span>estudos transversais (risco de CPA, UTMs, feed, estrutura ideal, snapshot, quick wins)</span><b>4</b><span>contas · Comprar, Expansão, Vender, Santander</span><b>4</b><span>formatos · Search, PMax, Demand Gen, Vídeo</span><b>8</b><span>meses de dados analisados</span></div></div>
+      <div class="kv"><b>12</b><span>auditorias de conta por formato</span><b>6</b><span>estudos transversais (risco de CPA, UTMs, feed, estrutura ideal, snapshot, quick wins)</span><b>4</b><span>contas · Comprar, Expansão, Vender, Santander</span><b>4</b><span>formatos · Search, PMax, Demand Gen, Vídeo</span><b>8</b><span>meses de dados analisados</span></div><a class="slink" href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/#s10" target="_blank" rel="noopener">Ver as 18 fontes</a></div>
     <div class="stream"><span class="mono">Frente 2</span><h3>Playbook de operação</h3>
-      <div class="kv"><b>45</b><span>itens em 10 categorias</span><b>14</b><span>regras de ouro</span><b>12</b><span>testes desenhados em backlog</span><b>18</b><span>pendências mapeadas com o negócio</span><b>27</b><span>checkpoints de rotina (diária a pré-sazonal)</span></div></div>
+      <div class="kv"><b>45</b><span>itens em 10 categorias</span><b>14</b><span>regras de ouro</span><b>12</b><span>testes desenhados em backlog</span><b>18</b><span>pendências mapeadas com o negócio</span><b>27</b><span>checkpoints de rotina (diária a pré-sazonal)</span></div><a class="slink" href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/" target="_blank" rel="noopener">Abrir o playbook</a></div>
     <div class="stream"><span class="mono">Frente 3</span><h3>TikTok Ads</h3>
-      <div class="kv"><b>19</b><span>seções de estratégia e produção</span><b>9</b><span>editorias com ponte de conversão</span><b>5</b><span>times com plano de ação</span><b>26</b><span>tarefas com dono, dependência e janela</span><b>8</b><span>itens de checklist de setup</span></div></div>
+      <div class="kv"><b>19</b><span>seções de estratégia e produção</span><b>9</b><span>editorias com ponte de conversão</span><b>5</b><span>times com plano de ação</span><b>26</b><span>tarefas com dono, dependência e janela</span><b>8</b><span>itens de checklist de setup</span></div><a class="slink" href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener">Abrir o briefing</a></div>
   </div>
 </section>
 
+<section>
+  <div class="sh"><h2>Entregáveis</h2><span class="mono">18 documentos de auditoria e estudo · 3 ambientes</span></div>
+  <div class="docs">
+    <div class="col"><span class="mono">Comprar</span><div>Search<small>jan–ago · atual. 25/09</small></div><div>Performance Max<small>v2 · 25/09</small></div><div>Demand Gen<small>Mega Feirão · v3 · 17/09</small></div><div>Vídeo<small>julho · 17/09</small></div><div>Matriz de risco de CPA<small>evidência até 21/09</small></div></div>
+    <div class="col"><span class="mono">Expansão</span><div>Search<small>jan–ago · 13/09</small></div><div>Performance Max<small>jan–ago · 25/09</small></div></div>
+    <div class="col"><span class="mono">Vender</span><div>Search<small>jan–ago · 25/09</small></div><div>Performance Max<small>jan–ago · 25/09</small></div><div>Demand Gen<small>desde 17/06 · 25/09</small></div></div>
+    <div class="col"><span class="mono">Santander</span><div>Search<small>jan–ago · 25/09</small></div><div>Performance Max<small>25/09</small></div><div>Demand Gen<small>25/09</small></div></div>
+    <div class="col"><span class="mono">Transversais</span><div>Media Snapshot #1<small>MCC · jan–ago</small></div><div>Diagnóstico de UTMs<small>todas · até 05/09</small></div><div>Feed Merchant Center<small>Comprar e Expansão</small></div><div>Estrutura de mídia ideal<small>em andamento · 24/09</small></div><div>Recomendações e quick wins<small>v1.6 · 11/09</small></div></div>
+  </div>
+  <p style="margin:12px 0 0;font-size:12px;color:var(--muted)">Mais os três ambientes publicados: <a href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/" target="_blank" rel="noopener" style="color:var(--ink)">playbook v1.0</a>, <a href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener" style="color:var(--ink)">briefing TikTok v3 com roadmap de outubro</a> e <a href="https://webmotors-performance-status.vercel.app/#2026-09-25" target="_blank" rel="noopener" style="color:var(--ink)">status de performance</a>.</p>
+</section>
 <section>
   <div class="sh"><h2>Esforço e maturidade do diagnóstico</h2><span class="mono">45 itens do playbook</span></div>
   <div class="effort">
