@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Webmotors · Resumo executivo · Set/2026</title>
+<title>Webmotors · Resumo executivo · Out/2026</title>
 <style>
 :root{--bg:#FFFFFF;--ink:#111111;--muted:#767676;--muted2:#A8A8A8;--line:#E7E7E7;--fill:#F5F5F5;--pos:#16A34A;--tint:#DCFCE7;--bar2:#767676;--bar3:#A8A8A8;--bar4:#E7E7E7;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111111;--ink:#FFFFFF;--muted:#A8A8A8;--muted2:#767676;--line:#2A2A2A;--fill:#1A1A1A;--pos:#22C55E;--tint:#12301E;--bar4:#2A2A2A}}
-:root[data-theme="dark"]{--bg:#111111;--ink:#FFFFFF;--muted:#A8A8A8;--muted2:#767676;--line:#2A2A2A;--fill:#1A1A1A;--pos:#22C55E;--tint:#12301E;--bar4:#2A2A2A}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111111;--ink:#FFFFFF;--muted:#A8A8A8;--muted2:#767676;--line:#2A2A2A;--fill:#1A1A1A;--pos:#22C55E;--tint:#12301E;--bar4:#2A2A2A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#111111;--ink:#FFFFFF;--muted:#A8A8A8;--muted2:#767676;--line:#2A2A2A;--fill:#1A1A1A;--pos:#22C55E;--tint:#12301E;--bar4:#2A2A2A;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:13px;line-height:1.4}
-.page{max-width:1040px;margin:0 auto}
+.page{max-width:1080px;margin:0 auto}
 .mono{font-family:"Courier New",Courier,monospace;text-transform:uppercase;letter-spacing:.14em;font-size:10px}
 header{background:#111111;color:#FFFFFF;padding:32px 40px 28px}
 header .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#A8A8A8}
-header h1{font-size:30px;line-height:1.12;margin:18px 0 0;font-weight:700;max-width:26ch}
+header h1{font-size:30px;line-height:1.12;margin:18px 0 0;font-weight:700;max-width:34ch}
+header .lede{margin:12px 0 0;color:#A8A8A8;font-size:14px;max-width:70ch}
 .hero{display:grid;grid-template-columns:repeat(5,1fr);margin-top:26px;border-top:1px solid #2A2A2A}
 .hero div{padding:16px 16px 0 0}
 .hero b{display:block;font-size:36px;white-space:nowrap;line-height:1;font-weight:700}
@@ -27,12 +28,14 @@ section:last-child{border-bottom:0}
 .sh{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:14px;flex-wrap:wrap}
 .sh h2{margin:0;font-size:17px}
 .sh .mono{color:var(--muted)}
-.streams{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.stream{border:1px solid var(--line);padding:16px}
+.streams{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stream{border:1px solid var(--line);padding:16px;display:flex;flex-direction:column}
 .stream .mono{color:var(--muted)}
 .stream h3{margin:6px 0 12px;font-size:15px}
-.kv{display:grid;grid-template-columns:auto 1fr;column-gap:12px;row-gap:6px;align-items:baseline}
-.kv b{font-size:22px;line-height:1;text-align:right;font-weight:700;min-width:2.2ch}
+.stream .tag{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;padding:1px 6px;border:1px solid var(--line);color:var(--muted);vertical-align:2px;letter-spacing:0;text-transform:none;font-family:Arial,Helvetica,sans-serif}
+.stream .tag.live{background:var(--tint);color:var(--pos);border-color:var(--tint)}
+.kv{display:grid;grid-template-columns:auto 1fr;column-gap:12px;row-gap:6px;align-items:baseline;flex:1}
+.kv b{font-size:22px;line-height:1;text-align:right;font-weight:700;min-width:2.2ch;white-space:nowrap}
 .kv span{color:var(--muted);font-size:12px}
 .effort{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .bar{display:flex;height:26px;margin:8px 0 8px;border:1px solid var(--line)}
@@ -48,15 +51,18 @@ section:last-child{border-bottom:0}
 .nums{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
 .nums div{padding:12px 12px 12px 0;border-bottom:1px solid var(--line)}
 .nums b{display:block;font-size:26px;line-height:1}
+.nums b.up{color:var(--pos)}
 .nums span{display:block;margin-top:6px;font-size:11.5px;color:var(--muted);line-height:1.3}
 .shift{margin:0;padding:0;list-style:none;border-top:2px solid var(--ink)}
 .shift li{padding:10px 0;border-bottom:1px solid var(--line)}
 .shift .from{color:var(--muted);font-size:12px}
 .shift .to{font-weight:700;font-size:13.5px;margin-top:2px}
-.status{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.pill{display:inline-block;background:var(--tint);color:var(--pos);font-weight:700;font-size:11px;padding:2px 7px;margin-right:6px}
+.status{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pill{display:inline-block;background:var(--tint);color:var(--pos);font-weight:700;font-size:11px;padding:2px 7px;margin-right:6px;white-space:nowrap}
+.pill.wip{background:var(--fill);color:var(--ink)}
 .row{padding:8px 0;border-bottom:1px solid var(--line);font-size:12.5px}
 .row:last-child{border-bottom:0}
+.row small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
 .tl{position:relative;display:grid;grid-template-columns:repeat(10,1fr);margin-top:6px}
 .tl::before{content:"";position:absolute;left:0;right:0;top:7px;height:2px;background:var(--ink)}
 .tl .m{position:relative;padding:22px 8px 0 0}
@@ -67,17 +73,23 @@ section:last-child{border-bottom:0}
 .tl .d{font-family:"Courier New",Courier,monospace;font-size:10px;letter-spacing:.08em;color:var(--muted)}
 .tl .t{font-weight:700;font-size:12px;margin-top:3px;line-height:1.25}
 .tl .s{font-size:11px;color:var(--muted);margin-top:3px;line-height:1.3}
+.cycle{display:flex;gap:0;margin-top:14px;font-size:11px;color:var(--muted)}
+.cycle span{flex:1;border-top:1px solid var(--line);padding-top:6px}
+.cycle span+span{border-left:1px solid var(--line);padding-left:10px}
 .hours{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
 .hours .big b{display:block;font-size:44px;line-height:1}
-.hours .big span{display:block;font-size:12px;color:var(--muted);margin-top:6px;max-width:22ch}
-.hrow{display:grid;grid-template-columns:170px 1fr 48px;gap:10px;align-items:center;font-size:12px;padding:4px 0}
-.hrow .track{height:12px;background:var(--fill)}
+.hours .big span{display:block;font-size:12px;color:var(--muted);margin-top:6px;max-width:24ch}
+.hours .split{margin-top:14px;font-size:12px;color:var(--muted);max-width:24ch}
+.hours .split b{font-size:15px;color:var(--ink);display:inline}
+.hrow{display:grid;grid-template-columns:200px 1fr 48px;gap:10px;align-items:center;font-size:12px;padding:4px 0}
+.hrow .track{height:12px;background:var(--fill);display:flex}
 .hrow .track i{display:block;height:100%;background:var(--ink)}
+.hrow .track i.c2{background:var(--bar3)}
 .hrow b{text-align:right}
+.hkey{display:flex;gap:14px;font-size:11px;color:var(--muted);margin:0 0 6px 210px}
+.hkey em{display:inline-block;width:10px;height:10px;margin-right:5px;vertical-align:-1px}
 .hnote{font-size:11px;color:var(--muted);margin-top:8px}
-@media (max-width:860px){.tl{grid-template-columns:1fr 1fr;row-gap:14px}.tl::before{display:none}.hours{grid-template-columns:1fr}.hrow{grid-template-columns:120px 1fr 40px}}
-@media print{.hours .big b{font-size:32px}}
-.ctas{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.ctas{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .cta{border:1px solid var(--ink);padding:16px;display:flex;flex-direction:column;gap:8px;color:var(--ink);text-decoration:none}
 .cta .mono{color:var(--muted)}
 .cta h3{margin:0;font-size:15px}
@@ -85,114 +97,230 @@ section:last-child{border-bottom:0}
 .cta .btn{align-self:flex-start;background:var(--ink);color:var(--bg);font-weight:700;font-size:12px;padding:8px 14px;margin-top:4px}
 .cta:hover .btn,.cta:focus-visible .btn{background:var(--pos);color:#FFFFFF}
 .cta:focus-visible{outline:2px solid var(--pos);outline-offset:2px}
-.slink{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--ink);border-bottom:1px solid var(--ink);text-decoration:none}
+.grp{color:var(--muted);margin:0 0 8px}
+.ctas+.grp{margin-top:18px}
+.cta .cred{font-size:11px;color:var(--ink);border-top:1px solid var(--line);padding-top:6px}
+.cta .cred b{font-weight:700}
+.cta.static{border-style:dashed}
+.cta.static .btn,.cta.static:hover .btn{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.slink{display:inline-block;margin-top:12px;font-size:12px;font-weight:700;color:var(--ink);border-bottom:1px solid var(--ink);text-decoration:none;align-self:flex-start}
 .docs{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
 .docs .col{border-top:2px solid var(--ink);padding-top:8px}
 .docs .col .mono{color:var(--muted);display:block;margin-bottom:6px}
 .docs .col div{font-size:12px;padding:5px 0;border-bottom:1px solid var(--line)}
 .docs .col div:last-child{border-bottom:0}
 .docs .col small{color:var(--muted);font-size:10.5px;display:block}
-@media (max-width:860px){.ctas{grid-template-columns:1fr}.docs{grid-template-columns:1fr 1fr}}
-@media print{.cta .btn::after{content:" · " attr(data-url);font-weight:400}}
+.docs .col div.new::after{content:"novo";display:inline-block;margin-left:6px;font-size:9.5px;font-weight:700;color:var(--pos);background:var(--tint);padding:0 5px;vertical-align:1px}
+.tiers{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:4px}
+.tiers th{text-align:left;font-family:"Courier New",Courier,monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:400;padding:6px 10px 6px 0;border-bottom:2px solid var(--ink)}
+.tiers td{padding:9px 10px 9px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+.tiers td.n{font-weight:700;white-space:nowrap}
+.tiers .mini{height:8px;background:var(--fill);width:100%;min-width:60px}
+.tiers .mini i{display:block;height:100%;background:var(--ink)}
+.tiers .mini.c i{background:var(--bar3)}
+.tierwrap{overflow-x:auto}
+.tiergrid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px}
+.rules{margin:0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.rules li{padding:9px 0;border-bottom:1px solid var(--line);font-size:12.5px}
+.rules li span{display:block;color:var(--muted);font-size:11.5px;margin-top:2px}
 footer{padding:14px 40px 26px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--line)}
-footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em}
-@media (max-width:860px){header,main,footer{padding-left:20px;padding-right:20px}.hero{grid-template-columns:1fr 1fr}.streams,.effort,.qq,.status,.facts{grid-template-columns:1fr}.hero b{font-size:34px}header h1{font-size:24px}}
-@media print{@page{size:A4;margin:9mm}body{font-size:10px}header{padding:18px 22px}main{padding:0 22px}section{padding:11px 0}.hero b{font-size:32px}header h1{font-size:22px}.nums b{font-size:20px}.kv b{font-size:17px}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em;max-width:110ch;line-height:1.6}
+@media (max-width:960px){.streams,.ctas{grid-template-columns:1fr 1fr}.docs{grid-template-columns:1fr 1fr}.status{grid-template-columns:1fr}}
+@media (max-width:860px){.tl{grid-template-columns:1fr 1fr;row-gap:14px}.tl::before{display:none}.hours{grid-template-columns:1fr}.hrow{grid-template-columns:130px 1fr 40px}.hkey{margin-left:0}.tiergrid{grid-template-columns:1fr}.cycle{display:none}}
+@media (max-width:860px){header,main,footer{padding-left:20px;padding-right:20px}.hero{grid-template-columns:1fr 1fr}.effort,.qq,.facts{grid-template-columns:1fr}.hero b{font-size:34px}header h1{font-size:24px}}
+@media (max-width:560px){.streams,.ctas,.docs{grid-template-columns:1fr}.nums{grid-template-columns:1fr 1fr}}
+@media print{@page{size:A4;margin:9mm}body{font-size:10px}header{padding:18px 22px}main{padding:0 22px}section{padding:11px 0}.hero b{font-size:30px}header h1{font-size:22px}.nums b{font-size:20px}.kv b{font-size:17px}.hours .big b{font-size:32px}.cta .btn::after{content:" · " attr(data-url);font-weight:400}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.beltnav{display:flex;align-items:center;gap:8px}
+.beltnav .mono{color:var(--muted);margin-right:6px}
+.bn{font:700 14px/1 Arial,Helvetica,sans-serif;width:30px;height:30px;border:1px solid var(--ink);background:var(--bg);color:var(--ink);cursor:pointer}
+.bn:hover:not(:disabled){background:var(--ink);color:var(--bg)}
+.bn:disabled{opacity:.3;cursor:default}
+.bn:focus-visible,.belt:focus-visible{outline:2px solid var(--pos);outline-offset:2px}
+.belt{overflow-x:auto;scroll-snap-type:x proximity;scroll-behavior:smooth;padding-bottom:10px;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.belt.end{-webkit-mask-image:none;mask-image:none}
+.lane{display:grid;grid-template-columns:repeat(12,164px);column-gap:10px;width:max-content}
+.phase{grid-row:1;border-top:2px solid var(--ink);padding-top:6px;margin-bottom:10px;font-size:12px;font-weight:700}
+.phase .mono{color:var(--muted);font-weight:400;margin-right:6px}
+.phase.nx{border-top-style:dashed}
+.st{grid-row:2;scroll-snap-align:start;border:1px solid var(--line);padding:11px 12px 12px;display:flex;flex-direction:column;gap:3px;position:relative;background:var(--bg)}
+.st::after{content:"";position:absolute;left:50%;bottom:-15px;width:2px;height:14px;background:var(--line)}
+.st .k{font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px}
+.st .d{font-family:"Courier New",Courier,monospace;font-size:10px;letter-spacing:.08em;color:var(--muted)}
+.st b{font-size:13px;line-height:1.25}
+.st .s{font-size:11px;color:var(--muted);line-height:1.3}
+.st.done .k::before,.st.win .k::before,.st.next .k::before{content:"";display:inline-block;width:8px;height:8px;margin-right:5px;vertical-align:0;background:var(--ink)}
+.st.win{border-color:var(--pos)}
+.st.win .k{color:var(--pos)}
+.st.win .k::before{background:var(--pos)}
+.st.next{border:1px dashed var(--ink)}
+.st.next .k::before{background:transparent;border:1px dashed var(--ink);width:6px;height:6px}
+.rail{grid-row:3;height:14px;margin-top:15px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);background:repeating-linear-gradient(90deg,var(--ink) 0 14px,transparent 14px 24px);background-size:24px 100%;animation:belt 2.4s linear infinite;position:relative}
+.rail.done{margin-right:-10px}
+.rail.todo{border-style:dashed;background:repeating-linear-gradient(90deg,var(--bar4) 0 14px,transparent 14px 24px);background-size:24px 100%}
+.today{position:absolute;left:-6px;top:-8px;font-family:"Courier New",Courier,monospace;font-size:10px;letter-spacing:.08em;color:var(--pos);font-weight:700;white-space:nowrap;padding:30px 0 0 6px;border-left:2px solid var(--pos);line-height:1}
+.lane{padding-bottom:20px}
+@keyframes belt{to{background-position:24px 0}}
+@media (prefers-reduced-motion:reduce){.rail{animation:none}.belt{scroll-behavior:auto}}
+.beltkey{margin-top:10px}
+.beltkey em{width:10px;height:10px}
+@media (max-width:860px){.lane{grid-template-columns:repeat(12,150px)}.beltnav .mono{display:none}}
+@media print{.belt{overflow:visible;-webkit-mask-image:none;mask-image:none}.lane{grid-template-columns:repeat(12,1fr);width:100%}.st{padding:6px}.st b{font-size:10px}.st .s{font-size:8.5px}.rail{animation:none}.bn{display:none}}
 </style>
 </head>
 <body><div class="page">
 <header>
-  <div class="top mono"><span>Webmotors · Resumo executivo de performance</span><span>Adroq · 29/09/2026</span></div>
-  <h1>Quatro contas auditadas, um playbook em operação e uma nova frente no TikTok em quatro semanas</h1>
+  <div class="top mono"><span>Webmotors · Resumo executivo de performance</span><span>Adroq · 23/10/2026</span></div>
+  <h1>Do diagnóstico à operação: estrutura nova do Google aprovada e TikTok no ar em sete semanas</h1>
+  <p class="lede">Atualização do resumo de 29/09. O primeiro ciclo entregou auditoria, playbook e briefing. O segundo transformou o diagnóstico em estrutura de conta, pacote pronto para importar e mídia rodando.</p>
   <div class="hero">
-    <div><b>18</b><span>auditorias e estudos entregues</span></div>
-    <div><b>45</b><span>situações diagnosticadas com ação e dono</span></div>
-    <div><b>~350h</b><span>dedicadas em 4 semanas (estimativa)</span></div>
-    <div><b>R$ 34M</b><span>em mídia Google Ads auditada (jan–ago, estimado)</span></div>
-    <div><b>R$ 450 mil</b><span>TikTok Ads planejado para outubro</span></div>
+    <div><b>~610h</b><span>dedicadas em 7 semanas (estimativa)</span></div>
+    <div><b>26</b><span>reuniões com ata e ações registradas</span></div>
+    <div><b>127</b><span>ações rastreadas no Daily Log</span></div>
+    <div><b>3 tiers</b><span>nova estrutura Google para Comprar e Expansão, aprovada em 14/10</span></div>
+    <div><b>R$ 450 mil</b><span>TikTok Ads em operação desde 01/10</span></div>
   </div>
 </header>
 
 <main>
 <section>
-  <div class="sh"><h2>Evolução do projeto</h2><span class="mono">do primeiro contato a hoje</span></div>
-  <div class="tl">
-    <div class="m done"><div class="d">INÍCIO SET*</div><div class="t">Primeiro contato</div><div class="s">Kickoff e acesso ao MCC e às 4 contas</div></div>
-    <div class="m done"><div class="d">~05/09</div><div class="t">Raio-x do ano</div><div class="s">Media Snapshot #1 e diagnóstico de UTMs</div></div>
-    <div class="m done"><div class="d">11/09</div><div class="t">Quick wins</div><div class="s">Recomendações Comprar e Expansão, v1.6</div></div>
-    <div class="m done"><div class="d">13/09</div><div class="t">Auditorias por conta</div><div class="s">Expansão Search abre a série</div></div>
-    <div class="m win"><div class="d">16/09</div><div class="t">Primeira execução</div><div class="s">3 quick wins aplicados no Comprar</div></div>
-    <div class="m done"><div class="d">17/09</div><div class="t">Demand Gen e Vídeo</div><div class="s">Flight Mega Feirão auditado, v3</div></div>
-    <div class="m done"><div class="d">21/09</div><div class="t">Crise de CPA</div><div class="s">Matriz de risco isola as causas</div></div>
-    <div class="m done"><div class="d">25/09</div><div class="t">Base consolidada</div><div class="s">12 auditorias atualizadas, estrutura ideal em curso</div></div>
-    <div class="m done"><div class="d">26/09</div><div class="t">Playbook v1.0</div><div class="s">Handover ao time de mídia</div></div>
-    <div class="m next"><div class="d">29/09 → 01/10</div><div class="t">TikTok Ads</div><div class="s">Briefing v3, setup e go-live</div></div>
+  <div class="sh"><h2>Evolução do projeto</h2><div class="beltnav"><span class="mono">03/09 a 05/11 · 12 etapas</span><button type="button" class="bn" data-dir="-1" aria-label="Voltar etapas">&#8592;</button><button type="button" class="bn" data-dir="1" aria-label="Avançar etapas">&#8594;</button></div></div>
+  <div class="belt" id="belt" tabindex="0" aria-label="Esteira de etapas do projeto, role na horizontal">
+    <div class="lane" role="list">
+      <div class="phase" style="grid-column:1 / span 5"><span class="mono">Ciclo 1</span> Diagnóstico e playbook</div>
+      <div class="phase" style="grid-column:6 / span 6"><span class="mono">Ciclo 2</span> Estrutura e operação</div>
+      <div class="phase nx" style="grid-column:12 / span 1"><span class="mono">Fase 3</span> Implementação</div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">03/09</span><b>Kickoff</b><span class="s">Primeira daily, acesso ao MCC e às 4 contas</span></div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">11/09</span><b>Quick wins</b><span class="s">Recomendações Comprar e Expansão, v1.6</span></div>
+      <div class="st win" role="listitem"><span class="k">Na conta</span><span class="d">16/09</span><b>Primeira execução</b><span class="s">3 quick wins aplicados no Comprar</span></div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">21/09</span><b>Crise de CPA</b><span class="s">Matriz de risco isola as 5 causas</span></div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">26/09</span><b>Playbook v1.0</b><span class="s">45 itens em handover ao time de mídia</span></div>
+      <div class="st win" role="listitem"><span class="k">Na conta</span><span class="d">01/10</span><b>TikTok no ar</b><span class="s">SP R$ 270 mil e Nacional R$ 180 mil</span></div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">09/10</span><b>Benchmark TikTok</b><span class="s">Criativos de Comprar, Expansão e App</span></div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">13/10</span><b>Estrutura ideal v1.0</b><span class="s">Miro v3, documento executivo e E25 como MQL</span></div>
+      <div class="st win" role="listitem"><span class="k">Na conta</span><span class="d">14/10</span><b>Estrutura aprovada</b><span class="s">3 tiers, Maximizar conversões e page feeds</span></div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">16/10</span><b>Playbook v1.1 e painel</b><span class="s">38 ajustes verificados e painel BI do TikTok</span></div>
+      <div class="st done" role="listitem"><span class="k">Entregue</span><span class="d">20 a 22/10</span><b>Pacote do Editor</b><span class="s">Search v13 e PMax v11 prontos para importar</span></div>
+      <div class="st next" role="listitem"><span class="k">Próximo</span><span class="d">24/10 → 05/11</span><b>Implementação</b><span class="s">Subida da estrutura e Feirão em 05/11</span></div>
+      <div class="rail done" style="grid-column:1 / span 11"></div>
+      <div class="rail todo" style="grid-column:12 / span 1"><span class="today">hoje · 23/10</span></div>
+    </div>
   </div>
+  <div class="legend beltkey"><span><em style="background:var(--ink)"></em>Entregue</span><span><em style="background:var(--pos)"></em>Mudança aplicada na conta</span><span><em style="border:1px dashed var(--ink)"></em>Próximo</span></div>
 </section>
+
 <section>
-  <div class="sh"><h2>Veja o detalhe do que foi feito</h2><span class="mono">3 ambientes vivos</span></div>
+  <div class="sh"><h2>Veja o detalhe do que foi feito</h2><span class="mono">8 materiais publicados</span></div>
+  <div class="grp mono">Google Ads · estrutura e operação</div>
   <div class="ctas">
-    <a class="cta" href="https://webmotors-performance-status.vercel.app/#2026-09-25" target="_blank" rel="noopener"><span class="mono">Acompanhamento</span><h3>Status de performance</h3><p>Leitura datada da performance das contas, com a atualização de 25/09.</p><span class="btn" data-url="webmotors-performance-status.vercel.app">Abrir status</span></a>
-    <a class="cta" href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/" target="_blank" rel="noopener"><span class="mono">Frentes 1 e 2</span><h3>Playbook de operação Google Ads</h3><p>45 itens com diagnóstico, verificação, recomendação e guardrail, mais regras, testes, rotinas e as 18 fontes.</p><span class="btn" data-url="webmotors-live-performance-playbook…vercel.app">Abrir playbook</span></a>
-    <a class="cta" href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener"><span class="mono">Frente 3</span><h3>Briefing TikTok e roadmap de outubro</h3><p>Estratégia, 9 editorias, specs de produção, plano de ação por time e checklist de setup.</p><span class="btn" data-url="webmotors-tiktok-briefing.vercel.app">Abrir briefing</span></a>
+    <a class="cta" href="https://google-ads-comprar-wm-ideal.vercel.app/" target="_blank" rel="noopener"><span class="mono">Frente 3 · one pager</span><h3>Estrutura ideal da conta Comprar</h3><p>Desenho em 3 tiers, campanhas, testes, lances e governança por page feed.</p><span class="cred">Login <b>Webmotors</b> · senha <b>Caliber</b></span><span class="btn" data-url="google-ads-comprar-wm-ideal.vercel.app">Abrir one pager</span></a>
+    <a class="cta" href="https://www.youtube.com/watch?v=afRC2Pd4GH0" target="_blank" rel="noopener"><span class="mono">Frente 3 · vídeo</span><h3>Showcase da estrutura</h3><p>Apresentação em vídeo da nova estrutura, para quem não esteve na daily de 14/10.</p><span class="btn" data-url="youtube.com/watch?v=afRC2Pd4GH0">Assistir vídeo</span></a>
+    <a class="cta" href="https://miro.com/app/board/uXjVHiSHjNw=/?share_link_id=202330519984" target="_blank" rel="noopener"><span class="mono">Frente 3 · Miro</span><h3>Estrutura ideal no Miro</h3><p>Board com as caixas de entrega: tiers, campanhas, grupos de recursos e testes.</p><span class="btn" data-url="miro.com/app/board/uXjVHiSHjNw=">Abrir Miro</span></a>
+    <a class="cta" href="https://playbook-gads-webmotors.vercel.app/" target="_blank" rel="noopener"><span class="mono">Frentes 1 e 2</span><h3>Playbook de operação v1.1</h3><p>45 itens com diagnóstico, regras, testes, rotinas e as 18 fontes.</p><span class="cred">Login <b>Webmotors</b> · senha <b>Caliber</b></span><span class="btn" data-url="playbook-gads-webmotors.vercel.app">Abrir playbook</span></a>
   </div>
-</section>
-<section>
-  <div class="sh"><h2>Volume da entrega</h2><span class="mono">3 frentes · 1 ciclo</span></div>
-  <div class="streams">
-    <div class="stream"><span class="mono">Frente 1</span><h3>Auditoria e diagnóstico</h3>
-      <div class="kv"><b>12</b><span>auditorias de conta por formato</span><b>6</b><span>estudos transversais (risco de CPA, UTMs, feed, estrutura ideal, snapshot, quick wins)</span><b>4</b><span>contas · Comprar, Expansão, Vender, Santander</span><b>4</b><span>formatos · Search, PMax, Demand Gen, Vídeo</span><b>8</b><span>meses de dados analisados</span></div><a class="slink" href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/#s10" target="_blank" rel="noopener">Ver as 18 fontes</a></div>
-    <div class="stream"><span class="mono">Frente 2</span><h3>Playbook de operação</h3>
-      <div class="kv"><b>45</b><span>itens em 10 categorias</span><b>14</b><span>regras de ouro</span><b>12</b><span>testes desenhados em backlog</span><b>18</b><span>pendências mapeadas com o negócio</span><b>27</b><span>checkpoints de rotina (diária a pré-sazonal)</span></div><a class="slink" href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/" target="_blank" rel="noopener">Abrir o playbook</a></div>
-    <div class="stream"><span class="mono">Frente 3</span><h3>TikTok Ads</h3>
-      <div class="kv"><b>19</b><span>seções de estratégia e produção</span><b>9</b><span>editorias com ponte de conversão</span><b>5</b><span>times com plano de ação</span><b>26</b><span>tarefas com dono, dependência e janela</span><b>8</b><span>itens de checklist de setup</span></div><a class="slink" href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener">Abrir o briefing</a></div>
+  <div class="grp mono">TikTok Ads e acompanhamento</div>
+  <div class="ctas">
+    <a class="cta" href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener"><span class="mono">Frente 4 · estratégia</span><h3>Briefing TikTok e roadmap</h3><p>Estratégia, 9 editorias, specs de produção, plano por time e roadmap de outubro.</p><span class="btn" data-url="webmotors-tiktok-briefing.vercel.app">Abrir briefing</span></a>
+    <div class="cta static"><span class="mono">Frente 4 · criação · 09/10</span><h3>Benchmark de criativos</h3><p>Comprar, Expansão e App, de 01/01 a 08/10: 9:16, 5 a 15 segundos e duas ou mais versões por conceito.</p><span class="btn">PDF em anexo</span></div>
+    <a class="cta" href="https://datastudio.google.com/u/0/reporting/f07dddc8-9db9-475e-bfa1-5f28208808c0/page/p_qm2d203i8d" target="_blank" rel="noopener"><span class="mono">Frente 4 · BI · novo</span><h3>Dashboard TikTok Ads</h3><p>Acompanhamento da performance do TikTok, montado pelo reforço de BI no time. 10h investidas até aqui.</p><span class="btn" data-url="datastudio.google.com/reporting/f07dddc8…">Abrir dashboard</span></a>
+    <a class="cta" href="https://webmotors-performance-status.vercel.app/#2026-09-25" target="_blank" rel="noopener"><span class="mono">Acompanhamento</span><h3>Status de performance</h3><p>Leitura datada da performance das contas, com a atualização de 25/09.</p><span class="btn" data-url="webmotors-performance-status.vercel.app">Abrir status</span></a>
   </div>
 </section>
 
 <section>
-  <div class="sh"><h2>Entregáveis</h2><span class="mono">18 documentos de auditoria e estudo · 3 ambientes</span></div>
-  <div class="docs">
-    <div class="col"><span class="mono">Comprar</span><div>Search<small>jan–ago · atual. 25/09</small></div><div>Performance Max<small>v2 · 25/09</small></div><div>Demand Gen<small>Mega Feirão · v3 · 17/09</small></div><div>Vídeo<small>julho · 17/09</small></div><div>Matriz de risco de CPA<small>evidência até 21/09</small></div></div>
-    <div class="col"><span class="mono">Expansão</span><div>Search<small>jan–ago · 13/09</small></div><div>Performance Max<small>jan–ago · 25/09</small></div></div>
-    <div class="col"><span class="mono">Vender</span><div>Search<small>jan–ago · 25/09</small></div><div>Performance Max<small>jan–ago · 25/09</small></div><div>Demand Gen<small>desde 17/06 · 25/09</small></div></div>
-    <div class="col"><span class="mono">Santander</span><div>Search<small>jan–ago · 25/09</small></div><div>Performance Max<small>25/09</small></div><div>Demand Gen<small>25/09</small></div></div>
-    <div class="col"><span class="mono">Transversais</span><div>Media Snapshot #1<small>MCC · jan–ago</small></div><div>Diagnóstico de UTMs<small>todas · até 05/09</small></div><div>Feed Merchant Center<small>Comprar e Expansão</small></div><div>Estrutura de mídia ideal<small>em andamento · 24/09</small></div><div>Recomendações e quick wins<small>v1.6 · 11/09</small></div></div>
+  <div class="sh"><h2>Volume da entrega</h2><span class="mono">4 frentes · 2 ciclos</span></div>
+  <div class="streams">
+    <div class="stream"><span class="mono">Frente 1 <span class="tag">concluída</span></span><h3>Auditoria e diagnóstico</h3>
+      <div class="kv"><b>12</b><span>auditorias de conta por formato</span><b>6</b><span>estudos transversais (risco de CPA, UTMs, feed, estrutura, snapshot, quick wins)</span><b>4</b><span>contas · Comprar, Expansão, Vender, Santander</span><b>R$ 34M</b><span>em mídia auditada, jan–ago (estimado)</span></div>
+      <a class="slink" href="https://playbook-gads-webmotors.vercel.app/" target="_blank" rel="noopener">Ver as 18 fontes no playbook</a></div>
+    <div class="stream"><span class="mono">Frente 2 <span class="tag live">v1.1</span></span><h3>Playbook de operação</h3>
+      <div class="kv"><b>45</b><span>itens em 10 categorias (v1.0)</span><b>38</b><span>ajustes da revisão do cliente aplicados e verificados na página</span><b>14</b><span>regras de ouro</span><b>12</b><span>testes desenhados em backlog</span><b>1</b><span>camada de login para acesso restrito</span></div>
+      <a class="slink" href="https://playbook-gads-webmotors.vercel.app/" target="_blank" rel="noopener">Abrir o playbook</a></div>
+    <div class="stream"><span class="mono">Frente 3 <span class="tag live">novo</span></span><h3>Nova estrutura Google Ads</h3>
+      <div class="kv"><b>2→1</b><span>contas Comprar e Expansão unificadas num só desenho</span><b>3</b><span>tiers geográficos cobrindo as 27 UFs</span><b>12+4</b><span>campanhas permanentes e testes no desenho (Miro v3)</span><b>6</b><span>versões do build de Search (v8 a v13) em 3 dias</span><b>3</b><span>PMax por tier com grupos Usados e Zero Km</span></div>
+      <a class="slink" href="https://miro.com/app/board/uXjVHiSHjNw=/?share_link_id=202330519984" target="_blank" rel="noopener">Abrir o Miro</a></div>
+    <div class="stream"><span class="mono">Frente 4 <span class="tag live">no ar</span></span><h3>TikTok Ads</h3>
+      <div class="kv"><b>01/10</b><span>go-live da conta Comprar, SP e Nacional</span><b>4</b><span>ritos de segunda e update semanal às quartas</span><b>+1</b><span>pessoa de BI no time, dedicada a dashboards</span><b>10h</b><span>de BI no dashboard de performance do TikTok Ads</span><b>3 dias</b><span>teste de incrementalidade no retargeting</span><b>UGC</b><span>formato nativo aprovado em 20/10</span><b>3</b><span>contas no benchmark de criativos (09/10)</span></div>
+      <a class="slink" href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener">Abrir o briefing</a></div>
   </div>
-  <p style="margin:12px 0 0;font-size:12px;color:var(--muted)">Mais os três ambientes publicados: <a href="https://webmotors-live-performance-playbook-git-main-ads-performance.vercel.app/" target="_blank" rel="noopener" style="color:var(--ink)">playbook v1.0</a>, <a href="https://webmotors-tiktok-briefing.vercel.app/" target="_blank" rel="noopener" style="color:var(--ink)">briefing TikTok v3 com roadmap de outubro</a> e <a href="https://webmotors-performance-status.vercel.app/#2026-09-25" target="_blank" rel="noopener" style="color:var(--ink)">status de performance</a>.</p>
 </section>
+
 <section>
-  <div class="sh"><h2>Esforço e maturidade do diagnóstico</h2><span class="mono">45 itens do playbook</span></div>
+  <div class="tiergrid">
+    <div>
+      <div class="sh"><h2>A estrutura aprovada em 14/10</h2><span class="mono">Search e PMax · fluxo Comprar</span></div>
+      <div class="tierwrap"><table class="tiers">
+        <thead><tr><th>Tier</th><th>Estados</th><th>Verba</th><th>Conversões</th><th>CPA</th></tr></thead>
+        <tbody>
+          <tr><td class="n">T1</td><td>SP</td><td><div class="mini"><i style="width:59%"></i></div>59%</td><td><div class="mini c"><i style="width:47%"></i></div>47%</td><td class="n">R$ 17,52</td></tr>
+          <tr><td class="n">T2</td><td>PR, RJ, MG, SC, RS e DF</td><td><div class="mini"><i style="width:34%"></i></div>34%</td><td><div class="mini c"><i style="width:42%"></i></div>42%</td><td class="n">R$ 11,32</td></tr>
+          <tr><td class="n">T3</td><td>Demais estados</td><td><div class="mini"><i style="width:7%"></i></div>7%</td><td><div class="mini c"><i style="width:11%"></i></div>11%</td><td class="n">R$ 9,23</td></tr>
+        </tbody>
+      </table></div>
+      <p style="margin:10px 0 0;font-size:12px;color:var(--muted)">SP leva 59% da verba e entrega 47% das conversões. A divisão em tiers dá orçamento e lance próprios a cada praça, em vez de deixar SP absorver o leilão nacional.</p>
+    </div>
+    <div>
+      <div class="sh"><h2>Decisões fechadas</h2><span class="mono">dailies de 13 e 14/10</span></div>
+      <ul class="rules">
+        <li>Maximizar conversões no aprendizado<span>2 a 4 semanas sem meta; CPA desejado só depois de janeiro</span></li>
+        <li>Genéricas governadas por page feeds<span>Custom labels a partir dos slugs do sitemap</span></li>
+        <li>Financiamento entra na estrutura Comprar<span>Os termos já gastavam mais em Compra do que na própria conta</span></li>
+        <li>Agência monta, time WM só importa<span>Pacote completo no Google Ads Editor</span></li>
+        <li>E25 do Adobe como padrão de MQL<span>Margem de 2 a 3% e prefixo único nos relatórios</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><h2>Entregáveis</h2><span class="mono">18 documentos do ciclo 1 · 12 novos no ciclo 2</span></div>
+  <div class="docs">
+    <div class="col"><span class="mono">Diagnóstico</span><div>12 auditorias de conta<small>4 contas · 4 formatos · até 25/09</small></div><div>Matriz de risco de CPA<small>evidência até 21/09</small></div><div>Media Snapshot #1<small>MCC · jan–ago</small></div><div>Diagnóstico de UTMs e feed<small>até 05/09</small></div><div>Quick wins<small>v1.6 · 11/09</small></div></div>
+    <div class="col"><span class="mono">Playbook</span><div>Playbook v1.0<small>45 itens · 26/09</small></div><div class="new">Playbook v1.1<small>38 ajustes verificados · 16/10</small></div><div class="new">Acesso por login<small>16/10</small></div></div>
+    <div class="col"><span class="mono">Estrutura Google</span><div class="new">Miro v3<small>13/10</small></div><div class="new">Estrutura ideal v1.0<small>documento executivo · 13/10</small></div><div class="new">One pager e vídeo<small>14/10</small></div><div class="new">Build Search v13<small>com extensões · 22/10</small></div><div class="new">Build PMax v11<small>T1, T2 e T3 · 21/10</small></div></div>
+    <div class="col"><span class="mono">TikTok</span><div>Briefing v3<small>19 seções · 28/09</small></div><div>Roadmap de outubro<small>4 fases · 28/09</small></div><div class="new">Setup e go-live<small>01/10</small></div><div class="new">Benchmark de criativos<small>3 contas · 09/10</small></div><div class="new">Dashboard TikTok Ads<small>Looker Studio · 10h de BI · 16/10</small></div></div>
+    <div class="col"><span class="mono">Dados e tracking</span><div class="new">Referência de tag mapping<small>05/10</small></div><div class="new">Padrão E25 de MQL<small>13/10</small></div><div>Estrutura de mídia ideal<small>base do desenho · 24/09</small></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><h2>Esforço e maturidade da operação</h2><span class="mono">127 ações no Daily Log · 26 reuniões</span></div>
   <div class="effort">
     <div>
-      <div class="mono" style="color:var(--muted)">Status de validação</div>
-      <div class="bar" role="img" aria-label="28 confirmados, 3 executados, 3 mistos, 10 em avaliação, 1 hipótese">
-        <i style="width:62.2%;background:var(--ink)"></i><i style="width:6.7%;background:var(--pos)"></i><i style="width:6.7%;background:var(--bar2)"></i><i style="width:22.2%;background:var(--bar3)"></i><i style="width:2.2%;background:var(--bar4)"></i></div>
-      <div class="legend"><span><em style="background:var(--ink)"></em><b>28</b> confirmados</span><span><em style="background:var(--pos)"></em><b>3</b> executados</span><span><em style="background:var(--bar2)"></em><b>3</b> mistos</span><span><em style="background:var(--bar3)"></em><b>10</b> em avaliação</span><span><em style="background:var(--bar4);border:1px solid var(--line)"></em><b>1</b> hipótese</span></div>
+      <div class="mono" style="color:var(--muted)">Ações por vertente</div>
+      <div class="bar" role="img" aria-label="66 estratégia, 46 tracking, 8 auditoria, 7 outras">
+        <i style="width:52%;background:var(--ink)"></i><i style="width:36.2%;background:var(--bar2)"></i><i style="width:6.3%;background:var(--bar3)"></i><i style="width:5.5%;background:var(--bar4)"></i></div>
+      <div class="legend"><span><em style="background:var(--ink)"></em><b>66</b> estratégia</span><span><em style="background:var(--bar2)"></em><b>46</b> tracking</span><span><em style="background:var(--bar3)"></em><b>8</b> auditoria</span><span><em style="background:var(--bar4);border:1px solid var(--line)"></em><b>7</b> outras</span></div>
     </div>
     <div>
       <div class="mono" style="color:var(--muted)">Prioridade</div>
-      <div class="bar" role="img" aria-label="18 alta, 1 mista, 21 média, 5 baixa">
-        <i style="width:40%;background:var(--ink)"></i><i style="width:2.2%;background:var(--bar2)"></i><i style="width:46.7%;background:var(--bar3)"></i><i style="width:11.1%;background:var(--bar4)"></i></div>
-      <div class="legend"><span><em style="background:var(--ink)"></em><b>18</b> alta</span><span><em style="background:var(--bar2)"></em><b>1</b> mista</span><span><em style="background:var(--bar3)"></em><b>21</b> média</span><span><em style="background:var(--bar4);border:1px solid var(--line)"></em><b>5</b> baixa</span></div>
+      <div class="bar" role="img" aria-label="52 alta, 53 média, 18 baixa, 4 sem prioridade">
+        <i style="width:40.9%;background:var(--ink)"></i><i style="width:41.7%;background:var(--bar3)"></i><i style="width:14.2%;background:var(--bar4)"></i><i style="width:3.2%;background:var(--fill)"></i></div>
+      <div class="legend"><span><em style="background:var(--ink)"></em><b>52</b> alta</span><span><em style="background:var(--bar3)"></em><b>53</b> média</span><span><em style="background:var(--bar4);border:1px solid var(--line)"></em><b>18</b> baixa</span><span><em style="background:var(--fill);border:1px solid var(--line)"></em><b>4</b> sem prioridade</span></div>
     </div>
   </div>
   <div class="facts" style="margin-top:14px">
-    <div class="fact"><b>Até v3</b><span>revisões por auditoria, com base atualizada de 31/08 para 25/09</span></div>
-    <div class="fact"><b>30</b><span>referências oficiais do Google Ads sustentando as recomendações</span></div>
-    <div class="fact"><b>69%</b><span>dos itens já confirmados ou executados, sem contar os mistos</span></div>
+    <div class="fact"><b>36%</b><span>das ações são de tracking: dados viraram a segunda frente do projeto</span></div>
+    <div class="fact"><b>22</b><span>regras de exclusão de URL e 5 públicos de supressão em cada PMax</span></div>
+    <div class="fact"><b>2</b><span>inconsistências de sinal encontradas: lead multiplicado por 3,14 no Google e cotação de lojista disparando como purchase no TikTok</span></div>
     <div class="fact"><b>1</b><span>padrão único de UTM e nomenclatura para Google e TikTok</span></div>
   </div>
 
   <div class="hours">
-    <div class="big"><b>~350h</b><span>estimadas no ciclo, faixa de 280h a 420h</span></div>
+    <div class="big"><b>~610h</b><span>estimadas em 7 semanas, faixa de 490h a 730h</span>
+      <div class="split"><b>~350h</b> no ciclo 1 e <b>~260h</b> no ciclo 2</div></div>
     <div>
-      <div class="hrow"><span>12 auditorias de conta</span><div class="track"><i style="width:100%"></i></div><b>120h</b></div>
-      <div class="hrow"><span>Playbook (45 itens + regras, testes, rotinas)</span><div class="track"><i style="width:58%"></i></div><b>70h</b></div>
-      <div class="hrow"><span>TikTok: briefing v3, plano e roadmap</span><div class="track"><i style="width:53%"></i></div><b>64h</b></div>
-      <div class="hrow"><span>6 estudos transversais</span><div class="track"><i style="width:52%"></i></div><b>62h</b></div>
-      <div class="hrow"><span>Gestão, alinhamentos e rituais</span><div class="track"><i style="width:20%"></i></div><b>24h</b></div>
-      <div class="hrow"><span>Execução e monitoramento na conta</span><div class="track"><i style="width:7%"></i></div><b>8h</b></div>
-      <div class="hnote">Base: ~10h por auditoria (extração, análise, redação e até 3 revisões), ~1h por item do playbook, ~2h por seção do TikTok. Equivale a cerca de 2 pessoas em tempo integral no período.</div>
+      <div class="hkey"><span><em style="background:var(--ink)"></em>Ciclo 1</span><span><em style="background:var(--bar3)"></em>Ciclo 2</span></div>
+      <div class="hrow"><span>TikTok: briefing, setup e operação</span><div class="track"><i style="width:51.6%"></i><i class="c2" style="width:48.4%"></i></div><b>124h</b></div>
+      <div class="hrow"><span>12 auditorias de conta</span><div class="track"><i style="width:96.8%"></i></div><b>120h</b></div>
+      <div class="hrow"><span>Nova estrutura Google e pacote do Editor</span><div class="track"><i class="c2" style="width:88.7%"></i></div><b>110h</b></div>
+      <div class="hrow"><span>Playbook v1.0 e v1.1</span><div class="track"><i style="width:56.5%"></i><i class="c2" style="width:12.9%"></i></div><b>86h</b></div>
+      <div class="hrow"><span>6 estudos transversais</span><div class="track"><i style="width:50%"></i></div><b>62h</b></div>
+      <div class="hrow"><span>Gestão, dailies e rituais</span><div class="track"><i style="width:19.4%"></i><i class="c2" style="width:24.2%"></i></div><b>54h</b></div>
+      <div class="hrow"><span>Tracking, eventos e dados</span><div class="track"><i class="c2" style="width:32.3%"></i></div><b>40h</b></div>
+      <div class="hrow"><span>BI: dashboard de TikTok Ads</span><div class="track"><i class="c2" style="width:8.1%"></i></div><b>10h</b></div>
+      <div class="hrow"><span>Execução na conta</span><div class="track"><i style="width:6.5%"></i></div><b>8h</b></div>
+      <div class="hnote">Ciclo 1 mantém a estimativa de 29/09. Ciclo 2: ~110h na estrutura (desenho, documento executivo, Miro e 6 versões do build), ~60h na operação do TikTok, ~40h em tracking, ~30h em 14 reuniões, ~16h no playbook v1.1 e 10h de BI no dashboard de TikTok Ads, com a entrada de uma pessoa de BI no time. Equivale a cerca de 2 pessoas em tempo integral no período.</div>
     </div>
   </div>
 </section>
@@ -200,24 +328,24 @@ footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em}
 <section>
   <div class="qq">
     <div>
-      <div class="sh"><h2>Resumo quantitativo</h2><span class="mono">o que os dados mostraram</span></div>
+      <div class="sh"><h2>Resumo quantitativo</h2><span class="mono">o que os dados mostraram no ciclo 2</span></div>
       <div class="nums">
-        <div><b>+47,8%</b><span>orçamento do Comprar em 3 ciclos, gatilho da alta de CPA de setembro</span></div>
-        <div><b>5</b><span>rodadas de CPA desejado em 7 dias, nas 9 campanhas juntas</span></div>
-        <div><b>40,31%</b><span>perda de impression share por rank no Search do Comprar</span></div>
-        <div><b>65–73%</b><span>das conversões da Expansão são simulação, não proposta</span></div>
-        <div><b>+47,9%</b><span>CPA com Display dentro do Search da Expansão; ~3x no Santander</span></div>
-        <div><b>70–80%</b><span>dos leads de financiamento já chegam orgânicos pelo Comprar</span></div>
+        <div><b class="up">99,43%</b><span>da meta de leads jurídicos atingida (leitura de 20/10)</span></div>
+        <div><b>95%</b><span>da meta de leads em setembro; Vender fechou em 92%</span></div>
+        <div><b>R$ 10</b><span>custo por conversão da estrutura nova do TikTok em aprendizado, contra 16 da anterior*</span></div>
+        <div><b>59%</b><span>da verba do Comprar em SP para 47% das conversões</span></div>
+        <div><b>R$ 9,23</b><span>CPA do T3, quase metade do CPA de SP</span></div>
+        <div><b>~R$ 14 mil</b><span>por dia, nova linha de base de pacing do TikTok desde 15/10</span></div>
       </div>
     </div>
     <div>
       <div class="sh"><h2>Resumo qualitativo</h2><span class="mono">o que mudou</span></div>
       <ul class="shift">
-        <li><div class="from">Ajustes simultâneos e reativos</div><div class="to">Operação regrada: uma alavanca por vez, janela de 7 a 14 dias</div></li>
-        <li><div class="from">CPA agregado como sucesso</div><div class="to">Conversão norte definida por conta</div></li>
-        <li><div class="from">Pedir verba para ganhar leilão</div><div class="to">Qualidade e rank antes de orçamento</div></li>
-        <li><div class="from">Conhecimento na cabeça de quem opera</div><div class="to">Playbook vivo com dono, autonomia e guardrail</div></li>
-        <li><div class="from">Google Ads como canal único</div><div class="to">TikTok como camada de lead gen, com rito semanal</div></li>
+        <li><div class="from">Duas contas competindo pela mesma busca</div><div class="to">Comprar e Expansão num desenho só, em 3 tiers</div></li>
+        <li><div class="from">CPA desejado desde o primeiro dia</div><div class="to">Aprendizado livre e meta só depois de janeiro</div></li>
+        <li><div class="from">Genéricas sem governança</div><div class="to">Page feeds com rótulos do sitemap</div></li>
+        <li><div class="from">Fontes de dados em conflito</div><div class="to">E25 como MQL e GA4 como suplemento ao Adobe</div></li>
+        <li><div class="from">Criativo com botões simulados</div><div class="to">Peças novas sem botões e UGC nativo</div></li>
       </ul>
     </div>
   </div>
@@ -226,23 +354,44 @@ footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em}
 <section>
   <div class="status">
     <div>
-      <div class="sh"><h2>Já entregue na conta</h2></div>
-      <div class="row"><span class="pill">16/09</span>Comprar: segmentação em Presença, DSA em português, Display fora do Search</div>
-      <div class="row"><span class="pill">26/09</span>Playbook v1.0 em handover para o time de mídia Webmotors</div>
-      <div class="row"><span class="pill">01/10</span>TikTok Ads no ar: SP R$ 270 mil e Nacional R$ 180 mil</div>
+      <div class="sh"><h2>Entregue ou pronto</h2></div>
+      <div class="row"><span class="pill">16/09</span>Comprar: Presença, DSA em português, Display fora do Search</div>
+      <div class="row"><span class="pill">26/09</span>Playbook v1.0 em handover ao time de mídia</div>
+      <div class="row"><span class="pill">01/10</span>TikTok Ads no ar em SP e Nacional</div>
+      <div class="row"><span class="pill">14/10</span>Estrutura Google aprovada, com one pager, vídeo e Miro</div>
+      <div class="row"><span class="pill">16/10</span>Playbook v1.1 com login e dashboard de TikTok Ads no Looker Studio</div>
+      <div class="row"><span class="pill">22/10</span>Pacote do Editor pronto: Search v13 e PMax v11</div>
     </div>
     <div>
-      <div class="sh"><h2>Decisões que destravam a fase 2</h2></div>
-      <div class="row">Conversão norte de Expansão, Santander e Vender</div>
-      <div class="row">Replicar os 3 quick wins do Comprar nas demais contas</div>
-      <div class="row">Validação dos 12 testes e das 18 pendências com o negócio</div>
+      <div class="sh"><h2>Em andamento na agência</h2></div>
+      <div class="row"><span class="pill wip">esta semana</span>Envio da estrutura com o playbook de implementação<small>Prazo combinado em 20/10: quarta ou quinta</small></div>
+      <div class="row">Playbook de page feeds para o time WM</div>
+      <div class="row">Documento de evidências das reprovações no TikTok</div>
+      <div class="row">Criativos novos sem botões e produção de UGC</div>
+      <div class="row">Leitura do teste de 3 dias no retargeting do TikTok</div>
+      <div class="row">Especialista externo para a divergência Adjust e Adobe</div>
+    </div>
+    <div>
+      <div class="sh"><h2>Decisões que destravam a fase 3</h2></div>
+      <div class="row">Requisitos da Martec para alimentar os page feeds<small>Bloqueia a subida das genéricas</small></div>
+      <div class="row">Fonte oficial das simulações de financiamento no Power BI</div>
+      <div class="row">Origem do bloqueio antibot nas campanhas do TikTok</div>
+      <div class="row">Envio de eventos ao GA4 como suplemento operacional</div>
+      <div class="row">Papéis de execução com a nova liderança de mídia do cliente</div>
+      <div class="row">Plano do Feirão de 05/11 sobre a estrutura nova</div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <span class="mono">*Data de início inferida pelos primeiros entregáveis. R$ 34M estimado: Comprar investiu R$ 16,23M, ~48% do MCC. Horas estimadas por volume entregue. Fontes: Playbook Google Ads v1.0 (26/09) · Briefing TikTok v3 e roadmap de outubro</span>
+  <span class="mono">*Janelas de tempo diferentes; comparação ainda não equivalente. Período: primeira daily em 03/09 até 23/10. R$ 34M estimado: Comprar investiu R$ 16,23M, ~48% do MCC. Horas estimadas por volume entregue. Ações e reuniões: Daily Log do Notion até 20/10. Fontes: Playbook v1.0 e v1.1 · Estrutura ideal v1.0 (13/10) · Builds do Editor (Search v13, PMax v11) · Briefing TikTok v3 · Benchmark de criativos TikTok (09/10) · Dashboard TikTok Ads (Looker Studio) · Dailies de 03/09 a 20/10</span>
   <span class="mono">adroq.com · Confidential</span>
 </footer>
-</div></body></html>
+</div><script>
+(function(){var b=document.getElementById("belt");if(!b)return;var btns=document.querySelectorAll(".bn");
+function upd(){var max=b.scrollWidth-b.clientWidth-2;btns[0].disabled=b.scrollLeft<=2;btns[1].disabled=b.scrollLeft>=max;b.classList.toggle("end",b.scrollLeft>=max)}
+btns.forEach(function(x){x.addEventListener("click",function(){b.scrollBy({left:+x.dataset.dir*174*3})})});
+b.addEventListener("scroll",upd,{passive:true});window.addEventListener("resize",upd);upd();})();
+</script>
+</body></html>
