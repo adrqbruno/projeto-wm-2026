@@ -18,6 +18,26 @@ header{background:#111111;color:#FFFFFF;padding:32px 40px 28px}
 header .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#A8A8A8}
 header h1{font-size:30px;line-height:1.12;margin:18px 0 0;font-weight:700;max-width:34ch}
 header .lede{margin:12px 0 0;color:#A8A8A8;font-size:14px;max-width:70ch}
+.hgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:start}
+.qbox{margin-top:18px;border:1px solid #2A2A2A;padding:18px 20px}
+.qbox .lbl{font-family:"Courier New",Courier,monospace;text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:#A8A8A8}
+.syn{margin:8px 0 0;padding:0;list-style:none}
+.syn li{display:grid;grid-template-columns:86px 1fr;gap:10px;padding:6px 0;border-top:1px solid #2A2A2A;font-size:12.5px;line-height:1.35}
+.syn li:first-child{border-top:0}
+.syn li b{color:#FFFFFF;font-size:11px}
+.syn li span{color:#D4D4D4}
+.score{display:flex;align-items:baseline;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid #FFFFFF}
+.score b{font-size:48px;line-height:1;font-weight:700}
+.score small{font-size:16px;color:#A8A8A8;font-weight:700}
+.score span{font-size:12px;color:#A8A8A8;max-width:20ch;line-height:1.3}
+.crit{margin-top:10px}
+.crit div{display:grid;grid-template-columns:1fr 70px 28px;gap:10px;align-items:center;font-size:11.5px;color:#D4D4D4;padding:3px 0}
+.crit i{display:block;height:6px;background:#2A2A2A;position:relative}
+.crit i::after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:#FFFFFF}
+.crit div.hi i::after{background:#22C55E}
+.crit em{font-style:normal;font-weight:700;color:#FFFFFF;text-align:right}
+.qnote{margin-top:10px;font-size:10.5px;color:#767676;line-height:1.4}
+@media (max-width:860px){.hgrid{grid-template-columns:1fr;gap:8px}}
 .hero{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:1px solid #2A2A2A}
 .hero div{padding:16px 16px 18px 0}
 .hero div:nth-child(n+4){border-top:1px solid #2A2A2A}
@@ -173,8 +193,30 @@ footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em;max-width:110c
 <body><div class="page">
 <header>
   <div class="top mono"><span>Webmotors · Resumo executivo de performance</span><span>Adroq · 23/10/2026</span></div>
+  <div class="hgrid">
+  <div>
   <h1>Do diagnóstico à operação: estrutura nova do Google aprovada e TikTok no ar em sete semanas</h1>
   <p class="lede">Atualização do resumo de 29/09. O primeiro ciclo entregou auditoria, playbook e briefing. O segundo transformou o diagnóstico em estrutura de conta, pacote pronto para importar e mídia rodando.</p>
+  </div>
+  <div class="qbox">
+    <span class="lbl">Síntese do projeto</span>
+    <ul class="syn">
+      <li><b>Entregue</b><span>Auditoria de 4 contas, playbook v1.1, estrutura Google aprovada e pacote do Editor pronto</span></li>
+      <li><b>Em operação</b><span>TikTok Ads desde 01/10, com dashboard de BI e rito semanal</span></li>
+      <li><b>Em aberto</b><span>Subida da estrutura, page feeds com a Martec e fonte única de dados</span></li>
+    </ul>
+    <div class="score"><b>8,1<small>/10</small></b><span>score de qualidade da execução</span></div>
+    <div class="crit">
+      <div class="hi"><span>Assiduidade nas dailies</span><i style="--w:100%"></i><em>10</em></div>
+      <div class="hi"><span>Volume entregue vs. escopo</span><i style="--w:90%"></i><em>9</em></div>
+      <div class="hi"><span>Rigor e evidência</span><i style="--w:90%"></i><em>9</em></div>
+      <div><span>Ritmo e prazos</span><i style="--w:80%"></i><em>8</em></div>
+      <div><span>Impacto já medido na conta</span><i style="--w:60%"></i><em>6</em></div>
+      <div><span>Governança das ações</span><i style="--w:60%"></i><em>6</em></div>
+    </div>
+    <p class="qnote">Média ponderada: entrega 25%, rigor 20%, impacto 20%, ritmo 15%, governança 10%, assiduidade 10%. Autoavaliação Adroq.</p>
+  </div>
+</div>
   <div class="hero">
     <div><b>~610h</b><span>dedicadas em 7 semanas (estimativa)</span></div>
     <div><b>26</b><span>reuniões com ata e ações registradas</span></div>
