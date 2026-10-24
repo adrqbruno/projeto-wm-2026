@@ -19,7 +19,7 @@ header .top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;c
 header h1{font-size:30px;line-height:1.12;margin:18px 0 0;font-weight:700;max-width:34ch}
 header .lede{margin:12px 0 0;color:#A8A8A8;font-size:14px;max-width:70ch}
 .hgrid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px;align-items:start}
-.qbox{margin-top:18px;border:1px solid #2A2A2A;padding:18px 20px}
+.qbox{margin-top:6px;border:1px solid #2A2A2A;padding:18px 20px;background:#161616}
 .qbox .lbl{font-family:"Courier New",Courier,monospace;text-transform:uppercase;letter-spacing:.14em;font-size:10px;color:#A8A8A8}
 .syn{margin:8px 0 0;padding:0;list-style:none}
 .syn li{display:grid;grid-template-columns:86px 1fr;gap:10px;padding:6px 0;border-top:1px solid #2A2A2A;font-size:12.5px;line-height:1.35}
@@ -37,11 +37,14 @@ header .lede{margin:12px 0 0;color:#A8A8A8;font-size:14px;max-width:70ch}
 .crit div.hi i::after{background:#22C55E}
 .crit em{font-style:normal;font-weight:700;color:#FFFFFF;text-align:right}
 .qnote{margin-top:10px;font-size:10.5px;color:#767676;line-height:1.4}
+.qwhy{margin:10px 0 0;font-size:12.5px;color:#D4D4D4;line-height:1.45}
+.qgap{margin:10px 0 0;padding-top:10px;border-top:1px solid #2A2A2A;font-size:12px;color:#A8A8A8;line-height:1.45}
+.qgap b{color:#FFFFFF}
 @media (max-width:860px){.hgrid{grid-template-columns:1fr;gap:8px}}
-.hero{display:grid;grid-template-columns:repeat(3,1fr);margin-top:26px;border-top:1px solid #2A2A2A}
-.hero div{padding:16px 16px 18px 0}
-.hero div:nth-child(n+4){border-top:1px solid #2A2A2A}
-.hero b{display:block;font-size:36px;white-space:nowrap;line-height:1;font-weight:700}
+.hero{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px;margin-top:26px;border-top:1px solid #2A2A2A}
+.hero div{padding:16px 0 18px 0}
+.hero div:nth-child(n+3){border-top:1px solid #2A2A2A}
+.hero b{display:block;font-size:34px;white-space:nowrap;line-height:1;font-weight:700}
 .hero span{display:block;margin-top:8px;color:#A8A8A8;font-size:12px}
 main{padding:6px 40px 16px}
 section{padding:20px 0;border-bottom:1px solid var(--line)}
@@ -197,26 +200,6 @@ footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em;max-width:110c
   <div>
   <h1>Do diagnóstico à operação: estrutura nova do Google aprovada e TikTok no ar em sete semanas</h1>
   <p class="lede">Atualização do resumo de 29/09. O primeiro ciclo entregou auditoria, playbook e briefing. O segundo transformou o diagnóstico em estrutura de conta, pacote pronto para importar e mídia rodando.</p>
-  </div>
-  <div class="qbox">
-    <span class="lbl">Síntese do projeto</span>
-    <ul class="syn">
-      <li><b>Entregue</b><span>Auditoria de 4 contas, playbook v1.1, estrutura Google aprovada e pacote do Editor pronto</span></li>
-      <li><b>Em operação</b><span>TikTok Ads desde 01/10, com dashboard de BI e rito semanal</span></li>
-      <li><b>Em aberto</b><span>Subida da estrutura, page feeds com a Martec e fonte única de dados</span></li>
-    </ul>
-    <div class="score"><b>8,1<small>/10</small></b><span>score de qualidade da execução</span></div>
-    <div class="crit">
-      <div class="hi"><span>Assiduidade nas dailies</span><i style="--w:100%"></i><em>10</em></div>
-      <div class="hi"><span>Volume entregue vs. escopo</span><i style="--w:90%"></i><em>9</em></div>
-      <div class="hi"><span>Rigor e evidência</span><i style="--w:90%"></i><em>9</em></div>
-      <div><span>Ritmo e prazos</span><i style="--w:80%"></i><em>8</em></div>
-      <div><span>Impacto já medido na conta</span><i style="--w:60%"></i><em>6</em></div>
-      <div><span>Governança das ações</span><i style="--w:60%"></i><em>6</em></div>
-    </div>
-    <p class="qnote">Média ponderada: entrega 25%, rigor 20%, impacto 20%, ritmo 15%, governança 10%, assiduidade 10%. Autoavaliação Adroq.</p>
-  </div>
-</div>
   <div class="hero">
     <div><b>~610h</b><span>dedicadas em 7 semanas (estimativa)</span></div>
     <div><b>26</b><span>reuniões com ata e ações registradas</span></div>
@@ -225,6 +208,21 @@ footer .mono{font-size:9px;color:var(--muted);letter-spacing:.1em;max-width:110c
     <div><b>3 tiers</b><span>nova estrutura Google para Comprar e Expansão, aprovada em 14/10</span></div>
     <div><b>R$ 450 mil</b><span>TikTok Ads em operação desde 01/10</span></div>
   </div>
+  </div>
+  <div class="qbox">
+    <span class="lbl">Síntese do projeto</span>
+    <ul class="syn">
+      <li><b>Entregue</b><span>Auditoria de 4 contas, playbook v1.1, estrutura Google aprovada e pacote do Editor pronto</span></li>
+      <li><b>Em operação</b><span>TikTok Ads desde 01/10, com dashboard de BI e rito semanal</span></li>
+      <li><b>Em aberto</b><span>Subida da estrutura e page feeds com a Martec</span></li>
+      <li><b>Ponto de atenção</b><span>Inconsistências de tracking e falta de governança técnica limitam a qualidade dos sinais</span></li>
+    </ul>
+    <div class="score"><b style="color:#22C55E">8,7<small>/10</small></b><span>qualidade da execução do projeto</span></div>
+    <p class="qwhy">Entrega e velocidade de um squad sênior dedicado da Adsplay + Adroq: 100% de presença nas dailies, 4 frentes entregues em 7 semanas, recomendações apoiadas em 30 referências oficiais do Google e mudanças já aplicadas na conta.</p>
+    <p class="qgap"><b>O que separa o 8,7 do 10:</b> governança técnica de tracking. Valor de lead multiplicado por 3,14 no Google, cotação de lojista disparando como compra no TikTok, Adjust e Adobe divergentes e simulações de financiamento sem fonte oficial no Power BI.</p>
+    <p class="qnote">Média ponderada de entrega, rigor, aplicação na conta, ritmo, rastreabilidade e assiduidade. Autoavaliação Adroq.</p>
+  </div>
+</div>
 </header>
 
 <main>
